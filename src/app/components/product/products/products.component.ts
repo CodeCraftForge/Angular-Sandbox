@@ -1,12 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ListComponent } from '../../shared/classes/list.component';
-import { Product } from '../../../shared/interfaces/product';
 import { Observable } from 'rxjs/internal/Observable';
+import { Product } from '../../../shared/interfaces/product';
+import { ListComponent } from '../../shared/classes/list.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
