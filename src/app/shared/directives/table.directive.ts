@@ -1,11 +1,10 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appTable]',
-  standalone: true
+  selector: '[appTable]'
 })
 export class TableDirective {
+  @Input() data: any[] = [];
 
-  constructor() { }
-
+  constructor(private el: ElementRef) { }
 }
