@@ -22,11 +22,11 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  fetchProducts(): Observable<Product> {
+  fetchProducts(): Observable<Product[]> {
     return this.fetchData('products');
   }
 
-  fetchUsers(): Observable<User> {
+  fetchUsers(): Observable<User[]> {
     return this.fetchData('users');
   }
 
