@@ -1,0 +1,12 @@
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    li a {
+        text-decoration: none;
+        &:hover, &.is-active {
+            text-decoration: underline;
+        }
+    }
+}
