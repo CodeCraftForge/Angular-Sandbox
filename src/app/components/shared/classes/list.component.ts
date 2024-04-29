@@ -21,9 +21,11 @@ export abstract class ListComponent implements OnInit, OnDestroy {
 
     getList() {
         this.listSubscription = this.fetchData().subscribe((response) => {
-            this.listData = response;
+            this.listData = response.map((item: any) =>
+                this.convertToInterface(item));
         });
     }
 
     abstract fetchData(): Observable<any>;
+    abstract convertToInterface(item: any): any;
 }

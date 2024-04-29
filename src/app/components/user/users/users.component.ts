@@ -12,6 +12,14 @@ import { ListComponent } from '../../shared/classes/list.component';
   styleUrl: './users.component.scss'
 })
 export class UsersComponent extends ListComponent {
+  override convertToInterface(item: any): User {
+    return {
+      id: item.id,
+      name: item.name,
+      username: item.username,
+      email: item.email
+    }
+  }
   override listData: User[] = [];
   override fetchData(): Observable<User[]> {
     return this.dataService.fetchUsers();
