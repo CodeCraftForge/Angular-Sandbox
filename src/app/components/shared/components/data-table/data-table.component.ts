@@ -10,4 +10,11 @@ import { Component, Input } from '@angular/core';
 })
 export class DataTableComponent {
   @Input() data: any[] = [];
+  columnNames: string[] = [];
+
+  ngOnChanges() {
+    if (this.data && this.data.length > 0) {
+      this.columnNames = Object.keys(this.data[0]);
+    }
+  }
 }
