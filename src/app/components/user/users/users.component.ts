@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../../../shared/interfaces/user';
 import { ListComponent } from '../../shared/classes/list.component';
+import { DataTableComponent } from '../../shared/components/data-table/data-table.component';
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DataTableComponent],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
