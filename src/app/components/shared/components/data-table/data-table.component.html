@@ -1,7 +1,12 @@
 <table>
     <thead>
         <tr>
-            <th *ngFor="let key of columnNames">{{ key }}</th>
+            <th *ngFor="let key of columnNames" (click)="sortBy(key)">
+                {{ key }}
+                <span *ngIf="sortedColumn === key">
+                    {{ sortDirection === 'asc' ? '▲' : '▼' }}
+                </span>
+            </th>
         </tr>
     </thead>
     <tbody>
